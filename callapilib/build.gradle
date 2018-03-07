@@ -1,9 +1,10 @@
 apply plugin: 'com.android.library'
-apply from: 'maven-push.gradle'
-
+apply plugin: "com.jfrog.bintray"
+apply plugin: 'com.github.dcendents.android-maven'
+version = "1.0.1"
 android {
   compileSdkVersion 26
-
+  buildToolsVersion "26.0.2"
 
 
   defaultConfig {
@@ -24,13 +25,31 @@ android {
 }
 
 dependencies {
-  implementation fileTree(dir: 'libs', include: ['*.jar'])
-
+  implementation fileTree(include: ['*.jar'], dir: 'libs')
   implementation 'com.android.support:appcompat-v7:26.1.0'
-  testImplementation 'junit:junit:4.12'
-  androidTestImplementation 'com.android.support.test:runner:1.0.1'
-  androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
   implementation 'com.squareup.retrofit2:retrofit:2.3.0'
   implementation 'com.squareup.retrofit2:converter-gson:2.3.0'
   implementation 'com.squareup.okhttp3:logging-interceptor:3.8.0'
 }
+
+ext {
+  bintrayRepo = 'com.github.dnsudhir' // your repo name
+  bintrayName = 'callapilib' // has to be same as your library module name
+  publishedGroupId = 'dnsudhir.com.callapilib' // your module package name
+  libraryName = 'callapi'
+  artifact = 'callapilib' // has to be same as your library module name
+  libraryDescription = 'Makes API integration very easy'
+  siteUrl = 'https://github.com/dnsudhir/CallAPISample'
+  gitUrl = 'https://github.com/dnsudhir/CallAPISample.git'
+  libraryVersion = '1.0'
+  developerId = 'dnsudhir'
+  developerName = 'Sudheer Doguparthi'
+  developerEmail = 'dnsudhir@gmail.com'
+  licenseName = 'The Apache Software License, Version 2.0'
+  licenseUrl = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+  allLicenses = ["Apache-2.0"]
+}
+
+
+apply from: 'https://raw.githubusercontent.com/numetriclabz/jcenter/master/installv.gradle'
+apply from: 'https://raw.githubusercontent.com/numetriclabz/jcenter/master/bintrayv.gradle'
