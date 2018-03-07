@@ -17,7 +17,7 @@ in the AndroidManifest.xml.
 
 You can integrate the library by adding the following line in dependencies to the build.gradle of your app:module,
 
- compile 'dnsudhir.com.callapilib:callapilib:1.0'
+ compile 'dnsudhir.com.callapilib:callapilib:1.1'
   
 
 Following are the steps to use the library:
