@@ -10,8 +10,8 @@ The following libraries are the prerequistes for this library.
     
 And the app should have the following permissions
 
-  <uses-permission android:name="android.permission.INTERNET" />
-  <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+  "<uses-permission android:name="android.permission.INTERNET" />"
+  "<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />"
   
 in the AndroidManifest.xml.
 
