@@ -10,14 +10,14 @@ The following libraries are the prerequistes for this library.
     
 And the app should have the following permissions
 
-   INTERNET
+   INTERNET,
   ACCESS_NETWORK_STATE
   
 in the AndroidManifest.xml.
 
 You can integrate the library by adding the following line in dependencies to the build.gradle of your app:module,
 
- compile 'dnsudhir.com.callapilib:callapilib:1.1'
+ <b>compile 'dnsudhir.com.callapilib:callapilib:1.1'</b>
   
 
 Following are the steps to use the library:
